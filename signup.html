@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUpPage</title>
+    <style>
+        body{
+            background-image: url("signupBG.png");
+            background-size: cover;
+        }
+        .container{
+            width: 100vw;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .innercontainer{
+            width: 40%;
+            height: 70%;
+            text-align: center;
+            border: 2px solid black;
+
+        }
+
+        .box input{
+            width: 20rem;
+            height: 2rem;
+
+
+        }
+        .ageGen input{
+            width: 5rem;
+            height: 1.7rem;
+        }
+
+        .ageGen select{
+            width: 5rem;
+            height: 2rem;
+            font-size: 0.8rem;
+        }
+
+        input , select{
+            border-radius: 8px;
+        }
+
+        img{
+            opacity: 0.8;
+            border: 3px solid;
+            border-image: linear-gradient(to right, rgb(255, 153, 0), rgba(255, 115, 0, 0.793));
+    border-image-slice: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="logo.png" alt="" width="180rem" height="80rem">
+    
+    <div class="container">
+        <div class="innercontainer">
+            <h1>Sign up</h1>
+            <form action="" id="myForm">
+                <div class="uname box">
+                    <input type="text" name="firstName" id="" placeholder=" Enter Your First Name"  required>
+                    
+                </div><br>
+    
+                <div class="uname box">
+                    <input type="text" name="lastName" id="" placeholder="Enter Your Second Name">
+                </div><br>
+                <div class="phoneNo box">
+                    <input type="tel" name="phoneNo" id="" placeholder="Enter Your phone No." required maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+                </div><br>
+                <div class="ageGen">
+                    <input type="number" name="uage" id="" placeholder="Set Age">
+                    <select name="ugender" id="">
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </div><br>
+    
+                <div class="email box">
+                    <input type="email" name="userMail" id="" placeholder="Enter Your Gmail ID" required>
+                </div><br>
+
+                <div class="submitButtton">
+                    <a href="index.html">
+                        
+                        <input type="submit" value="Submit">
+                    </a>
+                    <input type="reset" value="Reset">
+
+                </div><br>
+    
+                <div class="login">
+                    <p>if you already have a account? <a href="loginPage.html">Login here</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        // Redirect to another webpage
+        alert("You registration  successfully and Welcome to Car Rentals");
+        
+    });
+    </script>
+</body>
+</html>

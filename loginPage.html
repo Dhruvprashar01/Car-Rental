@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoginPage</title>
+  <link rel="stylesheet" href="styles.css">
+   <style>
+        body{
+            background-image: url("loginBG.png");
+            background-position: center;
+
+        }
+        .container{
+            height: 85vh;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .inContainer{
+            width: 50%;
+            height: 45%;
+            padding: 2rem;
+            border: 3px solid transparent;
+    border-image: linear-gradient(to right, silver, rgba(192, 192, 192, 0.542));
+    border-image-slice: 1;
+    text-align: center;
+        }
+
+        .textInput{
+            width: 12rem;
+            height: 1.5rem;
+            border-radius: 12px;
+        }
+
+        #button{
+            width: 4rem;
+            background-color: rgb(135, 235, 235);
+            border-radius: 5px;
+            
+        }
+
+
+        .logo{
+            width: 12rem;
+            height: 5rem;
+            background-image: url("logo.png");
+            background-position: center;
+            background-size: cover;
+            border: 3px solid transparent;
+    border-image: linear-gradient(to right, silver, rgba(192, 192, 192, 0.542));
+    border-image-slice: 1;
+    opacity: 0.7;
+        }
+    </style> 
+</head>
+<body>
+
+    
+    <div class="logo">
+
+    </div>
+    <div class="container">
+
+        <div class="inContainer">
+            <form id="myForm" class="form">
+
+          <h2>Login</h2>
+
+          <div class="name">
+            <abbr title="Enter Username">
+                <input type="text" id="loginUsername" class="textInput" placeholder="Username" required>
+            </abbr>
+          </div><br>
+
+          <div class="password">
+            <abbr title="Enter Password">
+                <input type="password" id="loginPassword" class="textInput" placeholder="Password" required>
+            </abbr>
+
+          </div><br>
+          <div class="submit">
+
+              <input type="submit" value="Login" id="button">
+          </div>
+
+          <div class="signup">
+              <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+          </div>
+
+        </form>
+        </div>
+</div>
+
+<script>
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        // Redirect to another webpage
+        alert("Yor are Logged in successfully");
+        
+    });
+</script>
+</body>
+</html>

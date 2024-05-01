@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("rentalfromBG4.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Roboto', sans-serif;
+        }
+        .rentalform {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .outerform {
+            width: 60%;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .outerform:hover {
+            transform: scale(1.05);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Adds padding without affecting the specified width */
+        }
+        .submitButtton input {
+            width: 49%;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .submitButtton input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .submitButtton input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="rentalform">
+        <div class="outerform">
+            <h2>Car Rental Form</h2>
+            <form action="" id="myForm">
+                <!-- User Name -->
+                <input type="text" name="firstName" placeholder="Enter Your First Name" required>
+                <input type="text" name="lastName" placeholder="Enter Your Last Name">
+
+                <!-- Contact Details -->
+                <input type="tel" name="phoneNo" placeholder="Enter Your Phone No." required maxlength="10" pattern="[0-9]+">
+                <input type="email" name="userMail" placeholder="Enter Your Email ID">
+
+                <!-- User Details -->
+                <input type="number" name="uage" placeholder="Enter Your Age">
+                <select name="ugender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <!-- Car Details -->
+                <select name="carNumber">
+                    <option value="">Number of Cars</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                </select>
+                <select name="carModel">
+                    <option value="">Select Car Model</option>
+                    <option value="Toyota Corolla">Toyota Corolla</option>
+                    <option value="Honda Civic">Honda Civic</option>
+                    <!-- Add other cars as needed -->
+                </select>
+
+                <!-- Rental Duration -->
+                <select name="rentalDuration">
+                    <option value="">Rental Duration</option>
+                    <option value="1_day">1 Day</option>
+                    <option value="3_days">3 Days</option>
+                    <option value="1_week">1 Week</option>
+                    <option value="1_month">1 Month</option>
+                </select>
+
+                <!-- Additional Info -->
+                <textarea name="address" rows="4" placeholder="Enter Your Address"></textarea>
+                <input type="text" name="licenseID" placeholder="Enter Your License ID" required>
+
+                <!-- Submission -->
+                <div class="submitButtton">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your request has been registered successfully. Thanks for using our website!");
+            window.location.href = "index.html";
+        });
+    </script>
+    
+</body>
+</html>
